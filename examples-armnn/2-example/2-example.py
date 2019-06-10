@@ -8,9 +8,9 @@ import time, csv, cv2
 from threading import Lock, Thread
 lock = Lock()
 
-ARMNN_RUN = "TfInceptionV3-Armnn --data-dir=media --model-dir=models > /opt/armnn/log.txt"
+ARMNN_RUN = "TfInceptionV3-Armnn --data-dir=data --model-dir=models > /opt/armnn/log.txt"
 PARSER_SCRIPT = "./parser.sh"
-INPUT_PATH = "/opt/armnn/media/"
+INPUT_PATH = "/opt/armnn/data/"
 UGLY_HACK = "Dog.jpg"
 RECTANGLE = 4
 READY = 8
