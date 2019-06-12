@@ -11,9 +11,11 @@ Boot the board with the correct .dtb file for camera operation.
 
 After booting, create the needed folders:
 
+```bash
 # mkdir -p /opt/armnn/model
 # mkdir -p /opt/armnn/data
 # chmod 777 /opt/armnn
+```
 
 On Host
 =======
@@ -22,8 +24,10 @@ Follow the steps from eIQ User Guide to generate the `InceptionV3` model.
 
 Deploy the needed files to the board:
 
+```bash
 $ scp -r 2-example/* media/ root@${IMX_INET_ADDR}:/opt/armnn
 $ scp -r models/* root@${IMX_INET_ADDR}:/opt/armnn/models
+```
 
 Getting the Flash Cards
 =======================
@@ -37,7 +41,9 @@ Run
 
 1) Run the demo:
 
+```bash
 /opt/armnn# python3 2-example.py
+```
 
 2) After the demo is running, show the flash cards to the camera and wait for
 the detection message: "Image captured, wait". The flash cards should not be
