@@ -13,35 +13,47 @@ Ethernet cable.
 
 After booting, create the needed folders:
 
+```bash
 # mkdir -p /opt/opencv/model
 # mkdir -p /opt/opencv/media
 # chmod 777 /opt/opencv
+```
 
 On Host
 =======
 
 1) Download the model:
 
+```bash
 $ mkdir -p model media
 $ wget -qN https://github.com/diegohdorta/models/raw/master/caffe/MobileNetSSD_deploy.caffemodel -P model/
 $ wget -qN https://github.com/diegohdorta/models/raw/master/caffe/MobileNetSSD_deploy.prototxt -P model/
+```
 
 2) Export the board's IP:
 
+```bash
 $ export IMX_INET_ADDR=<imx_ip>
+```
 
 3) Deploy the files to the board:
 
+```bash
 $ scp -r 1-example.py 2-example.py model/ media/ root@${IMX_INET_ADDR}:/opt/opencv
+```
 
 Run
 ===
 
 1) For 1-example, put images inside media folder and run:
 
+```bash
 # ./1-example.py
+```
 
 2) For 2-example, make sure the MIPI camera is connected to the board using the
 properly dtb file and run:
 
+```bash
 # ./2-example.py
+```
