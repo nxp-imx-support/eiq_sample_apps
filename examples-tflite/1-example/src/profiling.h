@@ -4,6 +4,9 @@
 * Devin Jiao bin.jiao@nxp.com
 * Any questions, please contact with bin.jiao@nxp.com
 * 19/06/2019
+*
+* SPDX-License-Identifier:    Apache-2.0
+*
 */
 #include <chrono>
 

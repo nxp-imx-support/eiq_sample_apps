@@ -19,16 +19,9 @@ freely, subject to the following restrictions:
 
    3. This notice may not be removed or altered from any source
    distribution. 
-==============================================================================
-* Copyright (C) 2019 NXP Semiconductors
-* Author: 
-* Xiyue Shi xiyue_shi@163.com
-* Devin Jiao bin.jiao@nxp.com
-* Any questions, please contact with bin.jiao@nxp.com
-* 19/06/2019
-* References:
-* https://github.com/progschj/ThreadPool
-*/
+References:
+https://github.com/progschj/ThreadPool
+==============================================================================*/
 
 #ifndef THREAD_POOL_H
 #define THREAD_POOL_H

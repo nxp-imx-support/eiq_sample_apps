@@ -19,6 +19,9 @@ limitations under the License.
 * Any questions, please contact with bin.jiao@nxp.com
 * 19/06/2019
 *
+* Change pre-trained model to MobileFaceNet and add functions of adding new person 
+* to database, caculating confidence coefficient, plotting and so on. 
+*
 * References:
 * https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/examples/label_image/label_image.cc
 */

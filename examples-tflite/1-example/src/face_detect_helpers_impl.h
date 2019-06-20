@@ -15,6 +15,9 @@ limitations under the License.
 * Devin Jiao bin.jiao@nxp.com
 * Any questions, please contact with bin.jiao@nxp.com
 * 19/06/2019
+*
+* Add OpenCV support. 
+*
 * References:
 * https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/examples/label_image/bitmap_helpers_impl.h
 */
