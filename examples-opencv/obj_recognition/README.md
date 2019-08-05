@@ -39,21 +39,32 @@ $ export IMX_INET_ADDR=<imx_ip>
 3) Deploy the files to the board:
 
 ```bash
-$ scp -r 1-example.py 2-example.py model/ media/ root@${IMX_INET_ADDR}:/opt/opencv
+$ scp -r src/* model/ media/ root@${IMX_INET_ADDR}:/opt/opencv
 ```
 
 Run
 ===
 
-1) For 1-example, put images inside media folder and run:
+* File-based demo
+
+1) Put images at your choice inside the media folder and run:
 
 ```bash
-# ./1-example.py
+# ./file.py
 ```
 
-2) For 2-example, make sure the MIPI camera is connected to the board using the
-properly dtb file and run:
+2) This returns the inference results for all the images inside the
+media/ folder. It includes labels for each recognized object in the
+input images. The processed images are available in the media-labeled/
+folder.
+
+* Camera demo
+
+1) Make sure the MIPI camera is connected to the board using the properly
+dtb file and run:
 
 ```bash
-# ./2-example.py
+# ./camera.py
 ```
+
+2) This opens a camera preview with inference results.

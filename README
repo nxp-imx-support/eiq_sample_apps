@@ -4,6 +4,19 @@ eIQ Sample Apps
 This repository includes the source codes for some demo applications to get started
 with the eIQ Toolkit.
 
+Available Applications
+======================
+
+* Arm NN inference engine:
+Handwritten Digit Recognition
+Object Recognition using camera or file input
+
+* OpenCV DNN inference engine:
+Object Recognition using camera or file input
+
+* TensorFlow Lite:
+Face Recognition
+
 Branches
 ========
 

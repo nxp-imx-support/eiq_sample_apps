@@ -20,29 +20,52 @@ After booting, create the needed folders:
 On Host
 =======
 
-Follow the steps from eIQ User Guide to generate the `InceptionV3` model.
+Follow the steps from eIQ User Guide to prepare the `InceptionV3` model
+for inference.
+
+The file-based demo expects three types of animals: Cat, Dog and shark.
+Download an image for each of these animals and rename as the following:
+
+Cat.jpg
+Dog.jpg
+shark.jpg
 
 Deploy the needed files to the board:
 
 ```bash
-$ scp -r 2-example/* media/ root@${IMX_INET_ADDR}:/opt/armnn
+$ scp -r src/* root@${IMX_INET_ADDR}:/opt/armnn
+$ scp -r Cat.jpg Dog.jpg shark.jpg root@${IMX_INET_ADDR}:/opt/armnn/data
 $ scp -r models/* root@${IMX_INET_ADDR}:/opt/armnn/models
 ```
 
 Getting the Flash Cards
 =======================
 
-This demo supports up to 1000 different objects. Just download some pictures at
-your choice and include a thick black border around the edges. You can print
-the flash cards or point the camera to the PC monitor as well.
+This demo supports up to 1000 different objects. For the camera demo,
+download some pictures at your choice and include a thick black border
+around the edges. You can print the flash cards or point the camera to
+the PC monitor as well.
 
 Run
 ===
 
+* File-based demo
+
 1) Run the demo:
 
 ```bash
-/opt/armnn# python3 2-example.py
+/opt/armnn# python3 file.py
+```
+
+2) After a few seconds, the demo prints the top 5 inference results for
+the pictures and their confidence percentage.
+
+* Camera demo
+
+1) Run the demo:
+
+```bash
+/opt/armnn# python3 camera.py
 ```
 
 2) After the demo is running, show the flash cards to the camera and wait for
