@@ -3,11 +3,17 @@
 1. i.MX 8 board running an image with the eIQ release.
 2. MIPI Camera or USB camera 
 
-## How to compile:
+## Compile on the target board:
 1. Copy the whole foder of src to i.MX8QM board.
 2. Change directory to src.
 3. Run 'make' to build the app.
 4. Run the app with command “./FaceRecognition -c 0 -h 0.85”, where ‘-c’ is camera index, and ‘-h’ is threshold for the predict score.
+
+## Compile on the host machine:
+1. Exact toolchain with eIQ on the host machine.
+2. Source the cross compiler environment. For example, 'source /opt/fsl-imx-xwayland/4.14-sumo/environment-setup-aarch64-poky-linux'
+3. Run 'make -f Makefile.linux' to build the app.
+4. Copy the built app to the board and run it with command “./FaceRecognition -c 0 -h 0.85”, where ‘-c’ is camera index, and ‘-h’ is threshold for the predict score.
 
 ## How to use:
 1. The left side of the interface shows real time video captured from the camera.
