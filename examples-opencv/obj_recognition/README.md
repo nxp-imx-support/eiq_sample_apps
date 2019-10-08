@@ -45,7 +45,7 @@ $ scp -r src/* model/ media/ root@${IMX_INET_ADDR}:/opt/opencv
 Run
 ===
 
-* File-based demo
+* ### File based demo
 
 1) Put images at your choice inside the media folder and run:
 
@@ -58,13 +58,24 @@ media/ folder. It includes labels for each recognized object in the
 input images. The processed images are available in the media-labeled/
 folder.
 
-* Camera demo
+* ### Camera demo
 
 1) Make sure the MIPI camera is connected to the board using the properly
 dtb file and run:
 
 ```bash
 # ./camera.py
+```
+
+2) This opens a camera preview with inference results.
+
+* ### Camera improved demo
+
+1) Make sure the MIPI camera is connected to the board using the properly
+dtb file and run:
+
+```bash
+# ./camera_improved.py
 ```
 
 2) This opens a camera preview with inference results.
