@@ -81,7 +81,11 @@ def getHostName():
           "imx8mqevk", "imx8mmevk" ]
     return True if gethostname() in l else False
 
-def gStreamerSettings(wh, hh, fr, dev, lq, se):
+def gStreamerSettings(wh, hh):
+    dev = "/dev/video0"
+    fr = 30
+    lq = "leaky=downstream max-size-buffers=1"
+    se = "sync=false emit-signals=true drop=true max-buffers=1"
     return (("""v4l2src device={} ! video/x-raw,width={},height={},framerate={}/1
                 ! queue {} ! videoconvert ! appsink {}""").format(dev, wh, hh, fr, lq, se))
 
@@ -111,13 +115,7 @@ if __name__ == "__main__":
     dict = {    "modelSSDProtoPath" : "model/MobileNetSSD_deploy.prototxt",
                 "modelSSDCaffePath" : "model/MobileNetSSD_deploy.caffemodel",
                 "mediaPath"         : "media/",
-                "device"            : "/dev/video0",
-                "framerate"         : 30,
-                "leaky_queue"       : "leaky=downstream max-size-buffers=1",
-                "sink_element"      : "sync=false emit-signals=true drop=true max-buffers=1",
-                "mode"              : gStreamerSettings(640, 480,
-                                                        framerate, device,
-                                                        leaky_queue, sink_element)
+                "mode"              : gStreamerSettings(640, 480)
                                       if getHostName() else 0,
                 "width"             : 300,
                 "height"            : 300,
