@@ -56,7 +56,8 @@ String similarity_text = "Similarity: ";
 void init_face_detect(Settings *setting)
 {
   String face_cascade_name = "haarcascade_frontalface_alt.xml";
-  face_cascade.load(face_cascade_name);
+  if( !face_cascade.load(face_cascade_name) )
+    printf("--(!)Error loading haarcascade_frontalface_alt.xml\n");
   s = setting;
 }
 
