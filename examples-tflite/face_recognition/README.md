@@ -24,3 +24,8 @@
    - or press the "Add new person" button and type label name in the console
   The face recognition function of the demo will be paused when user entering the label name.
 4. Press the stop button to exit the demo.
+
+## Link
+
+For further information on this demo please check:
+https://community.nxp.com/docs/DOC-343740

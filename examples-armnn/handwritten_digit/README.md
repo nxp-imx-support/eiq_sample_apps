@@ -65,3 +65,9 @@ Using TensorFlow:
 2) These tests run the inference on the input MNIST dataset images (Actual),
 showing the inference results (Predict) and how long it took to complete the
 prediction. 
+
+Link
+====
+
+For further information on this demo please check:
+https://community.nxp.com/docs/DOC-343738

@@ -76,3 +76,9 @@ twisted or curved on this step.
 
 NOTE: This can return "False" if the image was not correctly captured. In this
 case, try showing the flash cards again.
+
+Link
+====
+
+For further information on these demos please check:
+https://community.nxp.com/docs/DOC-343786

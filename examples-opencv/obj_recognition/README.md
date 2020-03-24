@@ -79,3 +79,9 @@ dtb file and run:
 ```
 
 2) This opens a camera preview with inference results.
+
+Link
+====
+
+For further information on these demos please check:
+https://community.nxp.com/docs/DOC-343739
