@@ -1,0 +1,31 @@
+From f2cc8d41e341a1920b2f3b58554b37ff0d97b76d Mon Sep 17 00:00:00 2001
+From: Vanessa Maegima <vanessa.maegima@nxp.com>
+Date: Tue, 24 Mar 2020 18:03:18 -0300
+Subject: [PATCH] face_recognition: Add information to deploy face detector to
+ the board
+
+Old README did not mention that the user should deploy
+haarcascade_frontalface_alt.xml to the board. Add this information as
+the demo does not run without this file.
+
+Signed-off-by: Vanessa Maegima <vanessa.maegima@nxp.com>
+---
+ examples-tflite/face_recognition/README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/examples-tflite/face_recognition/README.md b/examples-tflite/face_recognition/README.md
+index 54043a8..6658f72 100644
+--- a/examples-tflite/face_recognition/README.md
++++ b/examples-tflite/face_recognition/README.md
+@@ -13,7 +13,7 @@
+ 1. Exact toolchain with eIQ on the host machine.
+ 2. Source the cross compiler environment. For example, 'source /opt/fsl-imx-xwayland/4.14-sumo/environment-setup-aarch64-poky-linux'
+ 3. Run 'make -f Makefile.linux' to build the app.
+-4. Copy the built app to the board and run it with command “./FaceRecognition -c 0 -h 0.85”, where ‘-c’ is camera index, and ‘-h’ is threshold for the predict score.
++4. Copy the built app and "haarcascade_frontalface_alt.xml" to the board and run it with command “./FaceRecognition -c 0 -h 0.85”, where ‘-c’ is camera index, and ‘-h’ is threshold for the predict score.
+ 
+ ## How to use:
+ 1. The left side of the interface shows real time video captured from the camera.
+-- 
+2.17.1
+

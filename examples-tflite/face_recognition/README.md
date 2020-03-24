@@ -13,7 +13,7 @@
 1. Exact toolchain with eIQ on the host machine.
 2. Source the cross compiler environment. For example, 'source /opt/fsl-imx-xwayland/4.14-sumo/environment-setup-aarch64-poky-linux'
 3. Run 'make -f Makefile.linux' to build the app.
-4. Copy the built app to the board and run it with command “./FaceRecognition -c 0 -h 0.85”, where ‘-c’ is camera index, and ‘-h’ is threshold for the predict score.
+4. Copy the built app and "haarcascade_frontalface_alt.xml" to the board and run it with command “./FaceRecognition -c 0 -h 0.85”, where ‘-c’ is camera index, and ‘-h’ is threshold for the predict score.
 
 ## How to use:
 1. The left side of the interface shows real time video captured from the camera.
