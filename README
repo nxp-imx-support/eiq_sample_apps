@@ -8,6 +8,27 @@ For more informations on the demos please check: https://community.nxp.com/docs/
 
 For information on how to deploy the demos to an i.MX8 board, please check: https://community.nxp.com/docs/DOC-345134
 
+Dependencies
+============
+
+The demos in this repository target i.MX8* processors running the BSP
+imx-image-full image, which provides all of the needed packages for machine
+learning enablement.
+
+Many of these demos depends on a graphic windowing support which is not enabled
+by default in imx-image-full for L4.19.35. To enable this graphic support, add
+the following to your local.conf file and rebuild imx-image-full.
+
+To enable Qt5 windowing support:
+```
+PACKAGECONFIG_append_pn-opencv_mx8 = " qt5 jasper test"
+```
+
+To enable GTK windowing support:
+```
+PACKAGECONFIG_append_pn-opencv_mx8 = " gtk jasper test"
+```
+
 Available Applications
 ======================
 
