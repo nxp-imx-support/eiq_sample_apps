@@ -8,6 +8,15 @@ For more informations on the demos please check: https://community.nxp.com/docs/
 
 For information on how to deploy the demos to an i.MX8 board, please check: https://community.nxp.com/docs/DOC-345134
 
+Dependencies
+============
+
+The demos in this repository target iMX8* processors running the NXP BSP with
+the eIQ toolkit.
+
+Check https://www.nxp.com/docs/en/nxp/user-guides/UM11226.pdf for instructions
+on how to build an image with the eIQ Machine Learning enabled.
+
 Available Applications
 ======================
 
