@@ -27,10 +27,10 @@ limitations under the License.
 
 #include "opencv2/imgproc.hpp"
 
-#include "tensorflow/contrib/lite/builtin_op_data.h"
-#include "tensorflow/contrib/lite/interpreter.h"
-#include "tensorflow/contrib/lite/kernels/register.h"
-#include "tensorflow/contrib/lite/string_util.h"
+#include "tensorflow/lite/builtin_op_data.h"
+#include "tensorflow/lite/interpreter.h"
+#include "tensorflow/lite/kernels/register.h"
+#include "tensorflow/lite/string_util.h"
 
 #define LOG(x) std::cerr
 
